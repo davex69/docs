@@ -38,6 +38,7 @@ Laravel includes a variety of "helper" PHP functions. Many of these functions ar
 [array_pull](#method-array-pull)
 [array_set](#method-array-set)
 [array_sort](#method-array-sort)
+[array_sort](#method-array-sort)
 [array_where](#method-array-where)
 [head](#method-head)
 [last](#method-last)
@@ -276,6 +277,40 @@ The `array_sort` method sorts the array by the results of the given Closure:
 			['name' => 'Desk'],
 		]
 	*/
+<a name="method-array-sort-recursive"></a>
+#### `array_sort_recursive()` {#collection-method}
+
+The `array_sort_recursive()` function recursively sorts the array by the sort() function:
+
+    $array = [
+        [
+            'foo',
+            'bar',
+            'baz',
+        ],
+        [
+            'baz',
+            'foo',
+            'bar',
+        ],
+    ];
+
+    $array = array_sort_recursive($array);
+
+    /*
+    [
+        [
+            'bar',
+            'baz',
+            'foo',
+        ],
+        [
+            'bar',
+            'baz',
+            'foo',
+        ]
+    ]
+    */
 
 <a name="method-array-where"></a>
 #### `array_where()` {#collection-method}
